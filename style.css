@@ -1,0 +1,214 @@
+/* =================================================
+ESTILOS GENERALES Y VARIABLES
+=================================================
+*/
+
+:root {
+    /* Paleta de Colores Azul Claro y Neutros */
+    --primary-color: #007bff; /* Azul vibrante para elementos clave */
+    --primary-dark: #0056b3;  /* Azul más oscuro para 'hovers' y estados activos */
+    --light-blue: #e3f2fd;    /* Fondo muy claro para secciones y tabla */
+    --border-color: #bbdefb;  /* Azul suave para bordes y separadores */
+    --bg-color: #f0f8ff;      /* Fondo de la página (Alice Blue) */
+    
+    /* Colores de Texto */
+    --text-color: #2c3e50;    /* Color de texto principal (oscuro pero no negro) */
+    --text-muted: #7f8c8d;    /* Color de texto secundario */
+    
+    /* Tipografía y Espaciado */
+    --base-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 8px;     /* Redondeo de esquinas consistente */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave para efecto flotante */
+    --transition: all 0.3s ease; /* Transiciones suaves para interactividad */
+}
+
+/* Reseteo y Estilos Base del Cuerpo */
+body {
+    font-family: var(--base-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: flex-start;  /* Centrado vertical superior */
+    min-height: 100vh;
+}
+
+/* =================================================
+CONTENEDOR PRINCIPAL
+=================================================
+*/
+.container {
+    max-width: 650px;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color); /* Borde suave */
+}
+
+/* Estilo del Título Principal */
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* =================================================
+SECCIÓN DE FORMULARIO DE ENTRADA
+=================================================
+*/
+.form-group {
+    background-color: var(--light-blue); /* Fondo azul muy claro */
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilo para las Etiquetas de Formulario */
+.form-group label {
+    font-weight: 500;
+    color: var(--primary-dark);
+    margin-bottom: -10px; /* Acercar la etiqueta al input */
+    font-size: 0.9rem;
+}
+
+/* Estilo para los Inputs y Selects */
+select, input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no altere el ancho */
+    transition: var(--transition);
+}
+
+/* Efecto de Foco en Inputs y Selects */
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Botón 'Agregar a la lista' (Azul Primario) */
+.form-group button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+/* Efecto Hover en el botón */
+.form-group button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* =================================================
+TABLA DE RESUMEN DE ARTÍCULOS
+=================================================
+*/
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+/* Estilo del Encabezado de la Tabla */
+thead th {
+    background-color: #f8f9fa; /* Fondo gris muy suave */
+    color: var(--primary-dark);
+    text-align: left;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Estilo de las Celdas y Filas */
+table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+/* Efecto al pasar el mouse por una fila */
+table tbody tr:hover {
+    background-color: var(--light-blue);
+}
+
+table td {
+    padding: 12px 15px;
+    color: var(--text-color);
+}
+
+/* Centrar contenido de la columna de Paquetes */
+table th:last-child, table td:last-child {
+    text-align: center;
+}
+
+/* =================================================
+SECCIÓN DE CÁLCULO FINAL Y TOTAL
+=================================================
+*/
+.resumen {
+    border-top: 2px solid #e9ecef;
+    padding-top: 25px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiqueta de la Ciudad */
+.resumen label {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* Botón 'Calcular Total' (Verde para destacar acción final) */
+.btn-calc {
+    background-color: #28a745; /* Verde para 'acción final exitosa' */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* Efecto Hover en el botón de calcular */
+.btn-calc:hover {
+    background-color: #218838;
+    transform: translateY(-1px); /* Efecto de levitación sutil */
+}
+
+/* Estilo del Resultado Total */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--light-blue);
+    color: var(--primary-dark);
+    text-align: center;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}

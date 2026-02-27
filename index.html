@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Envíos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Envíos</h1>
+        
+        <div class="form-group">
+            <label>Categoría:</label>
+            <select id="categoria" onchange="actualizarProductos()">
+                <option value="Sillas">Sillas</option>
+                <option value="Mesas">Mesas</option>
+                <option value="Butacos">Butacos</option>
+                <option value="Sofas">Sofas</option>
+            </select>
+
+            <label>Producto:</label>
+            <select id="producto"></select>
+
+            <label>Cantidad:</label>
+            <input type="number" id="cantidad" min="1" value="1">
+            
+            <button onclick="agregarAlCarrito()">Agregar a la lista</button>
+        </div>
+
+        <table id="tablaEnvios">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Paquetes</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="resumen">
+            <label>Ciudad de Destino:</label>
+            <select id="ciudad"></select>
+            <button class="btn-calc" onclick="calcularTotal()">Calcular Total</button>
+            <h2 id="resultado">Total: $0</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
