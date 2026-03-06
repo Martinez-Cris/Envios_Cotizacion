@@ -8,7 +8,10 @@
 <body>
     <div class="container">
         <h1>Calculadora de Envíos</h1>
-        
+        <div class="form-group" style="background-color: #d1ecf1; border: 1px dashed #007bff;">
+            <label>Cargar lista de ciudades (CSV):</label>
+            <input type="file" id="inputArchivo" accept=".csv">
+        </div>
         <div class="form-group">
             <label>Categoría:</label>
             <select id="categoria" onchange="actualizarProductos()">
