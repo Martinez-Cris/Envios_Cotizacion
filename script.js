@@ -148,6 +148,30 @@ function calcularTotal() {
 }
 
 
+function reiniciarCotizacion() {
+    // Vaciar la lista de envíos
+    listaEnvios = [];
+    
+    // Limpiar la tabla
+    const tbody = document.querySelector("#tablaEnvios tbody");
+    tbody.innerHTML = "";
+    
+    // Resetear los controles del formulario
+    document.getElementById('categoria').value = "Sillas";
+    actualizarProductos();
+    document.getElementById('cantidad').value = 1;
+    
+    // Resetear la ciudad a la primera opción si hay ciudades cargadas
+    const ciuSelect = document.getElementById('ciudad');
+    if (ciuSelect.options.length > 0) {
+        ciuSelect.selectedIndex = 0;
+    }
+    
+    // Resetear el resultado
+    document.getElementById('resultado').innerText = "Total: $0";
+}
+
+
 /* ==========================================================================
    INICIALIZACIÓN
    ========================================================================== */

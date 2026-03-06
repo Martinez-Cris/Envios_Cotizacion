@@ -200,6 +200,26 @@ SECCIÓN DE CÁLCULO FINAL Y TOTAL
     transform: translateY(-1px); /* Efecto de levitación sutil */
 }
 
+/* Botón 'Cotizar Nuevo Envío' (Gris para acción de reset) */
+.btn-reset {
+    background-color: #6c757d; /* Gris para acción de reset */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+/* Efecto Hover en el botón de reset */
+.btn-reset:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px); /* Efecto de levitación sutil */
+}
+
 /* Estilo del Resultado Total */
 #resultado {
     margin-top: 20px;
