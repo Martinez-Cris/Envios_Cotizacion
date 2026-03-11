@@ -4,10 +4,10 @@
 
 // Definición de divisores por producto
 const datos = {
-    "Sillas": { "karla/4tubos": 8, "Eva S.B/C.B": 8, "MonoPieza": 5, "Rustica": 4 },
+    "Sillas": { "karla/4tubos": 8,"tapizado ponque o rebalado": 6, "Eva S.B/C.B": 8, "MonoPieza": 5, "Rustica": 4 },
     "Mesas": { "90x60cm H": 4, "60cm Cruceta": 4, "90x60cm y 60x60 dado/4patas": 2 },
     "Butacos": { "Butacos Evas": 2, "Butacos Karla/4tubos": 4 },
-    "Sofas": { "1 metro": 2, "1.5 metros": 2, "2 metros": 1, "puff 40cm": 4, "puff 1m": 2 }
+    "Sofas": { "1 metro": 1, "1.5 metros": 1, "2 metros": 1, "puff 40cm": 4, "puff 1m": 2 }
 };
 
 // Variable global para almacenar ciudades y precios
